@@ -1,15 +1,15 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: __dirname + '/src/index.js',
   output: {
-    path: 'dist/assets',
+    path: __dirname + '/dist/assets',
     filename: 'bundle.js',
     publicPath: 'assets'
   },
   devServer: {
     inline: true,
-    contentBase: './dist',
+    contentBase: __dirname + '/dist',
     port: 3000
   },
   module: {
@@ -17,11 +17,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        loader: ['babel-loader'],
-        query: {
+        loader: 'babel-loader',
+        options: {
           presets: ['latest', 'stage-0', 'react']
         }
       }
     ]
   }
-}
+};
