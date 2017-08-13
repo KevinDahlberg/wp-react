@@ -7,5 +7,7 @@ Experiment Combining Wordpress and React.js
 * React.js
 * Webpack
 * Babel
+* JSX
+* ES6
 * jQuery
 * Wordpress
