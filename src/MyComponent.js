@@ -12,7 +12,7 @@ export default class MyComponent extends Component {
 
     return (
       <ul>
-        {object.keys(state).map(i => (
+        {Object.keys(state).map(i => (
           <li key={i}>
             <strong>{i}: </strong>{state[i]}
           </li>

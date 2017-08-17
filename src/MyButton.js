@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
 
-export default class MyButton extends Component {
+const MyButton = ({ disabled, text }) => (
+  <button disabled={disabled}>{text}</button>
+);
 
-  render() {
-    return (
-      <section>
-        <button disabled={!enabled}>{text}</button>
-        <input placeholder={placeholder} size={size} />
-      </section>
-    );
-  }
-}
+MyButton.defaultProps = {
+  text: 'My Button',
+  disabled: false,
+};
+
+export default MyButton;
