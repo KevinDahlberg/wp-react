@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/webpack-dev-server",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +34,6 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "react-scripts": "^1.0.11",
     "webpack": "^3.5.3",
     "webpack-dev-server": "^2.7.1"
   }
