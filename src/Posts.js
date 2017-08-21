@@ -2,16 +2,22 @@ import React, { Component } from 'react';
 
 import postArray from './queries';
 
-const Posts = ({ postsArr }) => (
-  <div>
-    { postsArr.map(i => (
-      <div key={i}>{i}</div>
-    ))}
-  </div>
-);
+console.log(postArray);
 
-Posts.defaultProps = {
-  postsArr: ['Loading']
-};
+export default class Posts extends Component {
+  state = {
+    postsArr: postArray,
+  }
 
-export default Posts;
+  render() {
+    const { postsArr } = this.state;
+
+    return (
+      <div>
+        { postsArr.map(i => (
+          <div key={i}>{i}</div>
+        ))}
+      </div>
+    );
+  }
+}
