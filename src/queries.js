@@ -6,9 +6,11 @@ let postArray = [];
 const getPosts = () => {
   $.ajax({
     type: 'GET',
-    url: 'http://theocdcoder.com/wp/v2/posts',
+    url: 'http://theocdcoder.com/wp-json/wp/v2/posts',
     success: (response) => {
-      postArray.push(response.data).then(() => { console.log( 'postArray' ); });
+      postArray.push(response);
+      console.log(response);
+      console.log(postArray);
     }
   });
 };
